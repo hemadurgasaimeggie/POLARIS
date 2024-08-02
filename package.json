@@ -1,0 +1,11 @@
+{
+  "name": "polaris",
+  "version": "1.0.0",
+  "description": "Root project for managing microfrontends",
+  "scripts": {
+    "start:all": "concurrently \"cd POLARISBASEUI && npm start\" \"cd Landing && npm start\" \"cd Dashboard && npm start\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
