@@ -54,7 +54,7 @@ const MenuTabs = () => {
     switch (activeMenu) {
       case 'Home':
         return "<Welcome />";
-      case 'INTENT':
+      case 'Intent':
         return "Intent";
       case 'Ticket':
         return "Ticket"
