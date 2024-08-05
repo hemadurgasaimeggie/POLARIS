@@ -1,0 +1,48 @@
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  .css-hyum1k-MuiToolbar-root {
+    min-width: 600px !important;
+  }
+  .css-hyum1k-MuiToolbar-root {
+    min-height: 0px !important;
+  }
+  .header-black {
+    background-color: black;
+  }
+  .css-sghohy-MuiButtonBase-root-MuiButton-root {
+    padding: 0px  !important;
+    line-height: 1.75 !important;
+  }
+  .header-green {
+    background-color: green;
+  }
+  
+  .logo {
+    flex-grow: 1;
+  }
+  
+  .user-info {
+    margin-left: 16px;
+  }
+  
+  .main-content {
+    flex-grow: 1;
+    padding: 16px;
+  }
+  
+  .welcome-section, .tasks-section, .followed-items-section, .pulse-section {
+    margin-bottom: 16px;
+  }
+  
+  .pulse-input {
+    display: flex;
+    align-items: center;
+  }
+  
+  .pulse-input button, .pulse-input input {
+    margin-right: 8px;
+  }
+  

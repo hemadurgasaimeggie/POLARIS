@@ -1,10 +1,12 @@
+// index.tsx
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client'; // Use `react-dom/client` for React 18
 import App from './App';
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+
+root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root') // Ensure this matches the ID in your index.html
+  </React.StrictMode>
 );

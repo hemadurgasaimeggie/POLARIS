@@ -1,13 +1,13 @@
 import React from "react";
-import './index.css'
+import './index.css';
+import Dashboard from "./Header";
+import Welcome from "./Welcome";
 const App = () => {
   return (
-    <div className="container">
-      <div>Name: POLARISBASEUI</div>
-      <div>Framework: react</div>
-      <div>Language: TypeScript</div>
-      <div>CSS: Empty CSS</div>
-    </div>
+    <>
+    <Dashboard/>
+    {/* <Welcome/> */}
+    </>
   );
 };
 
