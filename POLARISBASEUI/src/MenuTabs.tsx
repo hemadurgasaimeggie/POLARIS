@@ -53,7 +53,7 @@ const MenuTabs = () => {
   const renderComponent = () => {
     switch (activeMenu) {
       case 'Home':
-        return <Welcome />;
+        return "<Welcome />";
       case 'INTENT':
         return "Intent";
       case 'Ticket':
@@ -62,9 +62,9 @@ const MenuTabs = () => {
         return 'CaseSearch'
       case 'Other':
         return <OtherComponent />;
-      // Add more cases for other menu items
+      
       default:
-        return <div>Select a menu item</div>;
+        return <Welcome/>;
     }
   };
 
