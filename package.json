@@ -7,5 +7,19 @@
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "@date-io/dayjs": "^3.0.0",
+    "@material-ui/pickers": "^3.3.11",
+    "@tinymce/tinymce-react": "^5.1.1",
+    "clsx": "^2.1.1",
+    "dayjs": "^1.11.12",
+    "downloadjs": "^1.4.7",
+    "lodash.difference": "^4.5.0",
+    "lodash.isequal": "^4.5.0",
+    "react-datepicker": "^7.3.0",
+    "react-number-format": "^5.4.0",
+    "react-redux": "^7.2.4",
+    "throttle-debounce": "^5.0.2"
   }
 }

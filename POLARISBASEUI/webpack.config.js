@@ -24,6 +24,26 @@ module.exports = (env, argv) => {
     new CopyWebpackPlugin({
       patterns: [
         { from: './sdk-config.json', to: './' },
+        {
+          from: './node_modules/@pega/constellationjs/dist/bootstrap-shell.js',
+          to: './constellation'
+        },
+        {
+          from: './node_modules/@pega/constellationjs/dist/bootstrap-shell.*.*',
+          to() {
+            return Promise.resolve('constellation/[name][ext]');
+          }
+        },
+        {
+          from: './node_modules/@pega/constellationjs/dist/lib_asset.json',
+          to: './constellation'
+        },
+        {
+          from: './node_modules/@pega/constellationjs/dist/constellation-core.*.*',
+          to() {
+            return Promise.resolve('constellation/prerequisite/[name][ext]');
+          },
+        },
         { from: './node_modules/@pega/constellationjs/dist/bootstrap-shell.js', to: './constellation' },
         { from: './node_modules/@pega/constellationjs/dist/bootstrap-shell.*.*', to: 'constellation/[name][ext]' },
         { from: './node_modules/@pega/constellationjs/dist/lib_asset.json', to: './constellation' },

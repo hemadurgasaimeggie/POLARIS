@@ -1,12 +1,6 @@
 import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Menu from '@mui/material/Menu';
-import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
-import CircularProgress from '@mui/material/CircularProgress';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import { AppBar, Box, Toolbar, Menu, Button, MenuItem, CircularProgress } from '@material-ui/core';
+import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import Welcome from './Welcome';
 // Example components for demonstration
 const OtherComponent = () => <div>Other Component</div>;
@@ -73,28 +67,28 @@ const MenuTabs = () => {
 
   return (
     <Box>
-      <AppBar position="static" sx={{ width: '100%' }}>
-        <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
-          <Box sx={{ display: { xs: 'none', md: 'flex' }, flexGrow: 2, justifyContent: 'space-between' }}>
+      <AppBar position="static" style={{ width: '100%' }}>
+        <Toolbar style={{ display: 'flex', justifyContent: 'space-between' }}>
+          <Box style={{ display: 'flex', flexGrow: 2, justifyContent: 'space-between' }}>
             {menuItems.map((item) => (
-              <Box key={item.label} sx={{ marginX: 2, position: 'relative' }}>
+              <Box key={item.label} style={{ margin: '0 16px', position: 'relative' }}>
                 <Button
                   onClick={(e) => handleOpenNavMenu(e, item.subMenu, item.label)}
-                  sx={{
+                  style={{
                     color: activeMenu === item.label ? 'black' : 'white',
                     display: 'flex',
                     alignItems: 'center'
                   }}
                 >
                   {item.label}
-                  {item.subMenu.length > 0 && <ArrowDropDownIcon sx={{ ml: 1 }} />}
+                  {item.subMenu.length > 0 && <ArrowDropDownIcon style={{ marginLeft: 8 }} />}
                 </Button>
                 {item.subMenu.length > 0 && (
                   <Menu
                     anchorEl={anchorElNav}
                     open={Boolean(anchorElNav && subMenuItems.length > 0)}
                     onClose={handleCloseNavMenu}
-                    sx={{ mt: 2 }}
+                    style={{ marginTop: 16 }}
                   >
                     {subMenuItems.map((subItem) => (
                       <MenuItem key={subItem} onClick={handleCloseNavMenu}>
@@ -108,7 +102,7 @@ const MenuTabs = () => {
           </Box>
         </Toolbar>
       </AppBar>
-      <Box sx={{ p: 2 }}>
+      <Box style={{ padding: 16 }}>
         {renderComponent()}
       </Box>
     </Box>

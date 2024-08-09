@@ -5,9 +5,9 @@ import {
   Typography,
   IconButton,
   Box,
-} from "@mui/material";
-import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
-import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
+} from "@material-ui/core";
+import NotificationsNoneOutlinedIcon from "@material-ui/icons/NotificationsNoneOutlined";
+import PersonOutlineOutlinedIcon from "@material-ui/icons/PersonOutlineOutlined";
 import MenuTabs from "./MenuTabs";
 import "./Header.css"
 const Header: React.FC = () => {
@@ -15,17 +15,19 @@ const Header: React.FC = () => {
     <div className="dashboard">
       <AppBar position="static" style={{ backgroundColor: "black", width:"100%" }}>
         <Toolbar style={{ minHeight: "20px" }}>
-          <Typography variant="h6" className="logo" color={"#89E689"}>
+          <Typography variant="h6" className="logo" style={{
+            color:'#89E689'
+          }}>
             EVERNORTH
           </Typography>
           <Box flexGrow={1} />
-          <Typography variant="body1" className="user-info" color={"#89E689"}>
+          <Typography variant="body1" className="user-info" style={{color:"#89E689"}}>
             <IconButton style={{ color: "#89E689" }}>
               <NotificationsNoneOutlinedIcon />
             </IconButton>
             Messages
           </Typography>
-          <Typography variant="body1" className="user-info" color={"#89E689"}>
+          <Typography variant="body1" className="user-info"  style={{color:"#89E689"}}>
             <IconButton style={{ color: "#89E689" }}>
               <PersonOutlineOutlinedIcon />
             </IconButton>
